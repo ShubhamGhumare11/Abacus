@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Index - Abacus </title>
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- fonts -->
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Main CSS File -->
+  <link href="assets/css/main.css" rel="stylesheet">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      line-height: 1.6;
+      color: #333;
+      background-color: rgba(243, 243, 208);
+      perspective: 1000px;
+    }
+
+    .hero {
+      height: 400px;
+      background-image: url('assets/img/image\ \(5\).png');
+      background-size: cover;
+      background-position: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+
+    }
+
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(0, 0, 0, 0.5);
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 1;
+      text-align: center;
+      color: ffff;
+      max-width: 80%;
+    }
+
+    .hero-content h1 {
+      font-size: 2.6em;
+      font-weight: bold;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+      margin-bottom: 20px;
+      animation: slideInDown 1s ease-out;
+     
+      
+    }
+
+    .blog-container {
+      max-width: 1200px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+
+    .blog-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 30px;
+    }
+
+    .blog-card {
+      background: rgba(243, 243, 208 );
+      border-radius: 15px;
+      overflow: hidden;
+      transform-style: preserve-3d;
+      transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+      opacity: 0;
+      transform: translateY(50px);
+    }
+
+    /* Card variations with different shadow colors */
+    .blog-card:nth-child(3n+1) {
+      box-shadow: 0 10px 20px rgba(181, 213, 106, 0.3);
+      border-bottom: 3px solid rgba(181, 213, 106, 0.3);
+    }
+
+    .blog-card:nth-child(3n+2) {
+      box-shadow: 0 10px 20px rgba(255, 124, 124, 0.3);
+      border-bottom: 3px solid rgba(255, 124, 124, 0.3);
+    }
+
+    .blog-card:nth-child(3n+3) {
+      box-shadow: 0 10px 20px rgba(132, 206, 224, 0.3);
+      border-bottom: 3px solid rgba(132, 206, 224, 0.3);
+    }
+
+    /* Hover effects with enhanced colored shadows */
+    .blog-card:nth-child(3n+1):hover {
+      box-shadow: 0 20px 40px rgba(181, 213, 106, 0.5);
+      transform: rotateX(10deg) rotateY(10deg) scale(1.05);
+    }
+
+    .blog-card:nth-child(3n+2):hover {
+      box-shadow: 0 20px 40px rgba(255, 124, 124, 0.5);
+      transform: rotateX(10deg) rotateY(10deg) scale(1.05);
+    }
+
+    .blog-card:nth-child(3n+3):hover {
+      box-shadow: 0 20px 40px rgba(132, 206, 224, 0.5);
+      transform: rotateX(10deg) rotateY(10deg) scale(1.05);
+    }
+
+    .blog-card.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .blog-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(45deg, #385892, #1a2a43);
+      opacity: 0;
+      transition: opacity 0.3s ease;
+      z-index: 1;
+    }
+
+    .blog-card:hover::before {
+      opacity: 0.1;
+    }
+
+    .blog-card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      transition: transform 0.5s ease;
+      transform-origin: center;
+    }
+
+    .blog-card:hover img {
+      transform: scale(1.1);
+    }
+
+    .blog-content {
+      padding: 20px;
+      position: relative;
+      z-index: 2;
+      background: white;
+      transition: transform 0.3s ease;
+    }
+
+    .blog-card:hover .blog-content {
+      transform: translateY(-10px);
+    }
+
+    .blog-content h2 {
+      font-size: 1.4rem;
+      color: #385892;
+      margin-bottom: 10px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .blog-content h2::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 2px;
+      background: #385892;
+      transform: translateX(-100%);
+      transition: transform 0.3s ease;
+    }
+
+    .blog-card:hover h2::after {
+      transform: translateX(0);
+    }
+
+    .blog-content p {
+      font-size: 1rem;
+      color: #666;
+      margin-bottom: 15px;
+      transform: translateY(20px);
+      opacity: 0.7;
+      transition: all 0.3s ease;
+    }
+
+    .blog-card:hover p {
+      transform: translateY(0);
+      opacity: 1;
+    }
+
+    @keyframes slideInDown {
+      from {
+        transform: translateY(-100px);
+        opacity: 0;
+      }
+      to {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
+
+    @keyframes shine {
+      from {
+        transform: translateX(-100%) rotate(45deg);
+      }
+      to {
+        transform: translateX(100%) rotate(45deg);
+      }
+    }
+
+    .blog-card::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 200%;
+      height: 100%;
+      background: linear-gradient(
+        to right,
+        rgba(255, 255, 255, 0) 0%,
+        rgba(255, 255, 255, 0.3) 50%,
+        rgba(255, 255, 255, 0) 100%
+      );
+      transform: translateX(-100%) rotate(45deg);
+      transition: transform 0.5s ease;
+    }
+
+    .blog-card:hover::after {
+      animation: shine 1s ease;
+    }
+
+    /* Responsive design */
+    @media (max-width: 1024px) {
+      .blog-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 768px) {
+      .blog-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .footer {
+            background-color: #000;
+            color: #fff;
+            padding: 40px 0;
+        }
+
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+
+        }
+
+        .footer-section {
+            flex: 1;
+            margin-right: 40px;
+
+        }
+
+        .footer-section h3 {
+            font-size: 18px;
+            margin-bottom: 20px;
+            color: white;
+
+        }
+
+        .footer-section ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .footer-section li {
+            margin-bottom: 10px;
+        }
+
+        .footer-section a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        .footer-bottom {
+            background-color: #000;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+            font-size: 12px;
+        }
+  </style>
+</head>
+
+<body>
+
+  <header id="header" class="header d-flex align-items-center sticky-top">
+    <div class="container-fluid container-xl position-relative d-flex align-items-center">
+
+      <a href="index.html" class="logo d-flex align-items-center me-auto">
+        <!-- Uncomment the line below if you also wish to use an image logo -->
+        <!-- <img src="assets/img/logo.png" alt=""> -->
+        <h1 class="sitename">Abacus</h1>
+      </a>
+
+      <nav id="navmenu" class="navmenu">
+        <ul>
+          <li><a href="Home.html">Home</a></li>
+          <li class="dropdown"><a href="index.html"><span>Courses</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+            <ul>
+              <li><a href="Abacus.html">ABACUS</a></li>
+              <li><a href="VedicMaths.html">VEDIC MATHS</a></li>
+              <li><a href="Phonics.html">PHONICS</a></li>
+              <li><a href="Smartwrite.html">SMART WRITE</a></li>
+              <li><a href="MagicTables.html">MAGIC TABLES</a></li>
+              <li><a href="kidzwiki.html">Kidzwiki</a></li>
+            </ul>
+          </li>
+          <!-- <li class="dropdown"><a href="/AboutUs.html"><span>About Us</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a> -->
+           
+               <!-- <li><a href="/WhyUs.html">AboutUs </a></li>  -->
+              <!-- <button id="whyUsBtn" class="btn">Why Us</button>  -->
+           
+          </li>
+          
+          <li><a href="AboutUs.html">AboutUs</a></li>
+          <li><a href="Joinus.html">join-us</a></li>
+          <li><a href="Contact.html">Contact</a></li>
+          <li><a href="Blog.html">BLOGS</a></li>
+          <li><a href="Quizbyte.html">QuizByte</a></li>
+          
+          <!-- <li class="dropdown"><a href="/Qyizbyte.html"><span>QuizByte</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a> -->
+            <!-- <ul>
+              <li><a href="#">Dropdown 1</a></li>
+               <li class="dropdown"><a href="#"><span>Deep Dropdown</span> <i
+                    class="bi bi-chevron-down toggle-dropdown"></i></a>
+                  </li>
+                <ul>
+                  <li><a href="#">Deep Dropdown 1</a></li>
+                  <li><a href="#">Deep Dropdown 2</a></li>
+                  <li><a href="#">Deep Dropdown 3</a></li>
+                  <li><a href="#">Deep Dropdown 4</a></li>
+                  <li><a href="#">Deep Dropdown 5</a></li>
+                </ul> -->
+                
+            
+              <!-- <li><a href="#">Dropdown 2</a></li>
+              <li><a href="#">Dropdown 3</a></li>
+              <li><a href="#">Dropdown 4</a></li>
+            </ul> --> 
+          </li>
+          <!-- <li><a href="#contact">Contact</a></li> -->
+        </ul>
+        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+      </nav>
+
+      <!-- <a class="btn-getstarted" href="index.html#about">Get Started</a> -->
+
+    </div>
+
+      <!-- login form -->
+
+      <!-- <form action=""class="join-us">
+        <h3>join us</h3>
+        <input type="email"placeholder="enter your email"class="box">
+        <input type="password" placeholder="enter your password"class="box">
+        <div class="remember">
+          <input type="checkbox" name=""id="remember">
+          <label for="remember-me">remember-me</label>
+        </div>
+        <a href="#"class="btn">
+          <span class="text text-1">login now</span>
+          <span class="text text-2"aria-hidden="true">login now</span>
+
+        </a>
+        </form> -->
+  </header>
+  <div class="hero">
+    <div class="hero-content">
+      <h1>Welcome to Our Blog</h1>
+    </div>
+  </div>
+
+  <main class="blog-container">
+    <div class="blog-grid">
+      <article class="blog-card">
+        <img src="assets/img/image.png" alt="Work-Life Balance">
+        <div class="blog-content">
+          <h2>How to Balance Work and Family When Running a Home Business?</h2>
+          <p>Tips for balancing family and a home business, especially for women who want to turn passions into
+            profitable ventures.</p>
+        </div>
+      </article>
+
+      <article class="blog-card">
+        <img src="assets/img/skilldeer.png" alt="Teaching Vedic Maths">
+        <div class="blog-content">
+          <h2>Simple Strategies for Teaching Vedic Maths to Kids</h2>
+          <p>Learn simple methods to teach Vedic Maths, enhancing the learning experience for teachers and students
+            alike.</p>
+        </div>
+      </article>
+
+      <article class="blog-card">
+        <img src="assets/img/image (2).png" alt="Abacus Kids Benefits">
+        <div class="blog-content">
+          <h2>Benefits of Joining Abacus Kids</h2>
+          <p>Discover the benefits of Abacus Kids, with insights from annual events and franchise experiences.</p>
+        </div>
+      </article>
+
+      <article class="blog-card">
+        <img src="assets/img/image (3).png" alt="Abacus Teacher Training">
+        <div class="blog-content">
+          <h2>Why Choose an Abacus Teacher Training Course in 2024</h2>
+          <p>Abacus teacher training courses are becoming increasingly popular among teachers looking to improve their
+            teaching abilities.</p>
+        </div>
+      </article>
+
+      <article class="blog-card">
+        <img src="assets/img/image.jpeg" alt="Education Investment">
+        <div class="blog-content">
+          <h2>Invest in Education and Success By partnering with Aristo Kids</h2>
+          <p>Education is the foundation of a flourishing community. It empowers people, encourages creativity, and
+            propels development.</p>
+        </div>
+      </article>
+
+      <article class="blog-card">
+        <img src="assets/img/image (4).png" alt="Franchise Benefits">
+        <div class="blog-content">
+          <h2>Financial and Social Benefits of Joining Aristo Kids as a Franchise</h2>
+          <p>Financial and social benefits of joining Aristo Kids as a franchise: Established Brand: Aristo Kids has a
+            well-established reputation.</p>
+        </div>
+      </article>
+    </div>
+  </main>
+  <footer class="footer">
+    <div class="footer-content">
+        <div class="footer-section">
+            <h3>Abacus</h3>
+            <!-- <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About us</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul> -->
+        </div>
+        <div class="footer-section">
+            <h3>Quick Links</h3>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About us</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </div>
+        <div class="footer-section">
+            <h3>Our Top Courses</h3>
+            <ul>
+                <li><a href="#">Toddler Abacus</a></li>
+                <li><a href="#">Runner</a></li>
+                <li><a href="#">Sprinters</a></li>
+                <li><a href="#">Advance Level</a></li>
+                <li><a href="#">Grand Level</a></li>
+            </ul>
+        </div>
+        <div class="footer-section">
+            <h3>Contact</h3>
+            <p>Email: info@abacus.com</p>
+            <p>Phone: +1 234 567 8900</p>
+        </div>
+    </div>
+</footer>
+<div class="footer-bottom">
+    <p>© How to learn Abacus at home | Best Vedik Maths Classes For Kids| Best Handwriting Classes For Kids | Best
+        Coding Classes For Kids | How To Start My Own Abacus Classes At Home |How To Start Business Without
+        Investment| How To Create Reading Habit In Kids | Part Time Business Ideas For Women | Best Phonics Classes
+        For Kids | General knowledge Classes For Kids | Vedic Maths Teacher Training Abacus All Rights Reserved</p>
+    <p>Designed by BootstrapMade</p>
+</div>
+  <script>
+    // Intersection Observer for scroll animations
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, {
+      threshold: 0.1
+    });
+
+    // Add 3D tilt effect
+    const cards = document.querySelectorAll('.blog-card');
+    cards.forEach(card => {
+      observer.observe(card);
+
+      card.addEventListener('mousemove', (e) => {
+        const rect = card.getBoundingClientRect();   
+        const x = e.clientX - rect.left;
+        const y = e.clientY - rect.top;
+
+        const centerX = rect.width / 2;
+        const centerY = rect.height / 2;
+
+        const rotateX = (y - centerY) / 20;
+        const rotateY = (centerX - x) / 20;
+
+        card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale(1.05)`;
+      });
+
+      card.addEventListener('mouseleave', () => {
+        card.style.transform = 'perspective(1000px) rotateX(0) rotateY(0) scale(1)';
+      });
+
+      // Add stagger effect to card appearance
+      card.style.transitionDelay = `${Array.from(cards).indexOf(card) * 0.1}s`;
+    });
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>Index - Abacus</title>
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+
+    <!-- Favicons -->
+    <link href="assets/img/favicon.png" rel="icon">
+    <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+
+    <!-- Vendor CSS Files -->
+    <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+    <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+    <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+    <!-- Main CSS File -->
+    <link href="assets/css/main.css" rel="stylesheet">
+
+    <style>
+        /* General Styling */
+        body {
+            font-family: 'Montserrat', sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            line-height: 1.6;
+            background-color: #fff7f7;
+        }
+
+        h1.heading {
+            font-size: 2.5rem;
+            color: #333;
+            text-align: center;
+            margin-bottom: 2rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1rem;
+        }
+
+        #hero {
+            position: relative;
+            padding-top: 100px;
+            text-align: center;
+        }
+
+        #hero img {
+            max-width: 100%;
+            height: auto;
+            max-height: 800px;
+            object-fit: cover;
+            display: block;
+            margin: 0 auto;
+        }
+
+        /* Container for QuizByte */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+
+        /* What We Offer Section */
+        .offer-section {
+            padding: 60px 20px;
+            text-align: center;
+
+            
+            background-color: #fbfce2;
+            
+        }
+
+    
+
+        h1 {
+            font-size: 3rem;
+            color: #333;
+        }
+
+        h2 {
+            font-size: 2rem;
+            color: #333;
+        }
+
+        h2.offer-heading {
+            font-size: 3rem;
+            color: #333;
+            margin-bottom: 2rem;
+            text-transform: uppercase;
+            position: relative;
+        }
+
+        .offer-heading span {
+            color: #ff7f00;
+        }
+
+        .offer-container {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .card {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            max-width: 300px;
+            height: 200px;
+            margin: 20px;
+            flex: 1;
+        }
+
+        /* Vision and Mission Section */
+        .vision-mission-section {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            padding: 40px 20px;
+            flex-wrap: wrap;
+        }
+
+        .vision-card,
+        .mission-card {
+            background-color: #e0f7fa; /* Common light color for vision and mission cards */
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            max-width: 400px;
+            text-align: center;
+            transition: all 0.3s ease;
+            flex: 1;
+        }
+
+        .vision-card h3,
+        .mission-card h3 {
+            font-size: 1.8rem;
+            margin: 10px 0;
+            color: #333;
+        }
+
+        .vision-card p,
+        .mission-card p {
+            font-size: 1.1rem;
+            color: #666;
+        }
+
+        /* Card hover effect */
+        .vision-card:hover,
+        .mission-card:hover {
+            background-color: #ddc5ab; /* Lighter color on hover */
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .offer-container {
+                flex-direction: column;
+            }
+
+            .vision-mission-section {
+                flex-direction: column;
+                text-align: center;
+            }
+        }.features-mission-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 40px;
+    background-color: rgba(101, 98, 57, 0.8); /* Light background color with transparency */
+    background-image: url('assets/img/Abacusmainimg2.jpg'); /* Your image path */
+    background-size: cover; /* Cover the entire section */
+    background-position: center; /* Center the image */
+    position: relative; /* Required for overlay */
+}
+
+.feature-card {
+    background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent card background */
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 20px;
+    width: 30%; /* Adjust width as needed */
+    margin: 15px 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s; /* Add transform and box-shadow transitions */
+}
+
+.feature-card:hover {
+    background-color: rgba(241, 241, 241, 0.9); /* Light color on hover */
+    transform: scale(1.05); /* Slightly increase size */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Increase shadow on hover */
+}
+
+.feature-card h3 {
+    font-size: 1.5rem;
+    color: #ff7f00; /* Heading color */
+    margin-bottom: 10px;
+    text-align: center; /* Center align heading */
+}
+
+.feature-card p {
+    font-size: 1rem;
+    color: #555;
+    text-align: center; /* Center align text */
+}
+.quiz-title {
+        font-size: 3.5rem;
+        color: rgb(152, 118, 70);
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    /* Zoom effect and bold font on hover */
+    
+
+    </style>
+
+</head>
+
+<body class="index-page">
+    <header id="header" class="header d-flex align-items-center sticky-top">
+        <div class="container-fluid container-xl position-relative d-flex align-items-center">
+            <a href="index.html" class="logo d-flex align-items-center me-auto">
+                <h1 class="sitename">Abacus</h1>
+            </a>
+            <nav id="navmenu" class="navmenu">
+                <ul>
+                    <li><a href="/Home.html">Home</a></li>
+                    <li class="dropdown"><a href="/index.html"><span>Courses</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+                        <ul>
+                            <li><a href="/Abacus.html">ABACUS</a></li>
+                            <li><a href="/VedicMaths.html">VEDIC MATHS</a></li>
+                            <li><a href="/Phonics.html">PHONICS</a></li>
+                            <li><a href="/Smartwrite.html">SMART WRITE</a></li>
+                            <li><a href="/MagicTables.html">MAGIC TABLES</a></li>
+                            <li><a href="/kidzwiki.html">Kidzwiki</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="/AboutUs.html">About Us</a></li>
+                    <li><a href="/Joinus.html">JOIN US</a></li>
+                    <li><a href="/Contact.html">Contact</a></li>
+                    <li><a href="/Blog.html">BLOGS</a></li>
+                    <li><a href="/Quizbyte.html">QuizByte</a></li>
+                </ul>
+                <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+            </nav>
+        </div>
+    </header>
+
+    <main class="main">
+        <!-- Hero Section -->
+        <section id="hero" class="hero section">
+            <img src="assets/img/Aboutus[1].jpg" alt="">
+            <div class="container text-center" data-aos-delay="100">
+                <div class="row justify-content-center">
+                    <!-- <div class="col-lg-8">  -->
+                    <!-- <a href="#about" class="btn-get-started">Read more</a>  -->
+                    <!-- </div>  -->
+                </div>
+            </div>
+        </section>
+
+        <!-- What We Offer Section -->
+        <section class="offer-section">
+            <div >
+            <h1 class="quiz-title">
+                ONLINE QUIZ PORTAL FOR HOSTING COMPETITIONS
+            </h1>
+        </div>
+            <br><br>
+            <h2 class="offer-heading" style="font-size: 2.5rem; font-weight: bold; color: #333; text-align: center;">
+                What <span style="color: #ff7f00;">We</span> Offer
+            </h2>
+            <div class="offer-container">
+                <div class="card">
+                    <p>We provide an innovative, user-friendly platform designed for hosting competitions. Our database features over 50,000 ABACUS and Vedic Maths questions for a comprehensive assessment experience.</p>
+                </div>
+                <div class="card">
+                    <p>This web-based platform is currently utilized by numerous institutions to effectively conduct online exams and host competitions tailored for ABACUS and Vedic Maths.</p>
+                </div>
+            </div>
+        </section>
+        
+
+        
+
+        <!-- Vision and Mission Section -->
+        <section class="vision-mission-section">
+            <div class="vision-card">
+                <h3>Vision</h3>
+                <p>We have a vision to offer an affordable, user-friendly, flexible and proven platform for conducting online exams and hosting competitions.</p>
+            </div>
+            <div class="mission-card">
+                <h3>Mission</h3>
+                <p>Our mission is to empower students with the tools they need to succeed in their exams and competitions.</p>
+            </div>
+        </section>
+
+        <section class="features-mission-section">
+            <div class="feature-card">
+                <h3>Comprehensive Question Bank</h3>
+                <p>Access a vast collection of over 50,000 ABACUS and Vedic Maths questions designed to enhance learning and competition.</p>
+            </div>
+            <div class="feature-card">
+                <h3>User-Friendly Interface</h3>
+                <p>Our platform features an intuitive design that makes it easy for students and teachers to navigate and utilize effectively.</p>
+            </div>
+            <div class="feature-card">
+                <h3>Real-Time Analytics</h3>
+                <p>Track student performance with detailed analytics and reports that provide insights into strengths and areas for improvement.</p>
+            </div>
+            <div class="feature-card">
+                <h3>Interactive Quizzes</h3>
+                <p>Engage students with interactive quizzes that make learning fun and competitive while reinforcing their knowledge.</p>
+            </div>
+            <div class="feature-card">
+                <h3>Timed Challenges</h3>
+                <p>Enhance skills with timed quizzes that challenge students to think quickly and accurately under pressure.</p>
+            </div>
+            <div class="feature-card">
+                <h3>Leaderboards</h3>
+                <p>Encourage healthy competition through leaderboards that showcase top performers and motivate all participants.</p>
+            </div>
+            <div class="feature-card">
+                <h3>Customized Tests</h3>
+                <p>Create personalized quizzes tailored to individual student needs, allowing for focused learning experiences.</p>
+            </div>
+            <div class="feature-card">
+                <h3>Certificates & Badges</h3>
+                <p>Reward students with certificates and badges for completing quizzes and achieving milestones, boosting their motivation.</p>
+            </div>
+            <div class="feature-card">
+                <h3>Community Support</h3>
+                <p>Join a community of learners and educators where tips, resources, and experiences can be shared for collective growth.</p>
+            </div>
+        </section>
+        
+        
+        
+    </main>
+
+    <!-- Vendor JS Files -->
+    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/vendor/aos/aos.js"></script>
+    <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+    <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,604 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Index - Abacus </title>
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- fonts -->
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Main CSS File -->
+  <link href="assets/css/main.css" rel="stylesheet">
+
+  <!-- =======================================================
+  *  Name: Abacus
+  *  URL: https://bootstrapmade.com/Abacus-free-multipurpose-bootstrap-/
+  * Updated: Aug 07 2024 with Bootstrap v5.3.3
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+  <style>
+    .roboto-regular {
+      font-family: "Roboto", sans-serif;
+      font-weight: 400;
+      font-style: normal;
+      
+    }
+
+    .swiper {
+      width: 100%;
+      height: 600px;
+      /* Adjust height as needed */
+    }
+
+    .swiper-slide img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      /* This will maintain aspect ratio */
+    }
+
+    .container {
+      max-width: 1200px;
+      width: 100%;
+
+    }
+
+    h1 {
+      text-align: center;
+      color: #333;
+      font-size: 2.5em;
+      margin-bottom: 30px;
+    }
+
+    .cards {
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+    }
+
+    .card {
+      background-color: #fff;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      margin: 20px;
+      padding: 30px;
+      width: 300px;
+      text-align: center;
+      position: relative;
+    }
+
+    .card-icon {
+      width: 60px;
+      height: 60px;
+      background-color: #fff;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: absolute;
+      top: -30px;
+      left: 50%;
+      transform: translateX(-50%);
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+
+    .card-icon img {
+      width: 30px;
+      height: 30px;
+    }
+
+    .card h2 {
+      margin-top: 20px;
+      color: #fff;
+      font-size: 1.5em;
+    }
+
+    .card p {
+      color: #fff;
+      font-size: 0.9em;
+      margin-bottom: 20px;
+    }
+
+
+    .card button {
+      background-color: #fff;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 5px;
+      cursor: pointer;
+      font-weight: bold;
+      transition: background-color 0.3s;
+    }
+
+    .card button:hover {
+      background-color: #f0f0f0;
+    }
+
+    #card1 {
+      background-color: #b5d56a;
+    }
+
+    #card2 {
+      background-color: #ff7c7c;
+    }
+
+    #card3 {
+      background-color: #84cee0;
+    }
+
+    #card1 button {
+      color: #b5d56a;
+    }
+
+    #card2 button {
+      color: #ff7c7c;
+    }
+
+    #card3 button {
+      color: #84cee0;
+    }
+
+    .container {
+      text-align: center;
+
+    }
+
+    .cards {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      margin-top: 20px;
+    }
+
+    .card {
+      width: 300px;
+      padding: 25px;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-10px) scale(1.05);
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+      border-color: #0066cc;
+    }
+
+    .card-icon img {
+      width: 50px;
+      height: 50px;
+    }
+
+    h1 {
+      font-size: 32px;
+      margin-bottom: 10px;
+    }
+
+    h2 {
+      margin: 10px 0;
+      color: #333;
+    }
+
+    p {
+      font-size: 14px;
+      color: #555;
+    }
+
+    button {
+      margin-top: 15px;
+      padding: 8px 16px;
+      background-color: #0066cc;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #004c99;
+    }
+
+    .footer {
+      background-color: #000;
+      color: #fff;
+      padding: 40px 0;
+    }
+
+    .footer-content {
+      display: flex;
+      justify-content: space-between;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+
+    }
+
+    .footer-section {
+      flex: 1;
+      margin-right: 40px;
+
+    }
+
+    .footer-section h3 {
+      font-size: 18px;
+      margin-bottom: 20px;
+      color: white;
+
+    }
+
+    .footer-section ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .footer-section li {
+      margin-bottom: 10px;
+    }
+
+    .footer-section a {
+      color: #fff;
+      text-decoration: none;
+    }
+
+    .footer-bottom {
+      background-color: #000;
+      color: #fff;
+      text-align: center;
+      padding: 10px 0;
+      font-size: 12px;
+    }
+  </style>
+</head>
+
+<body class="index-page">
+
+  <header id="header" class="header d-flex align-items-center sticky-top">
+    <div class="container-fluid container-xl position-relative d-flex align-items-center">
+
+      <a href="index.html" class="logo d-flex align-items-center me-auto">
+        <!-- Uncomment the line below if you also wish to use an image logo -->
+        <!-- <img src="assets/img/logo.png" alt=""> -->
+        <h1 class="sitename">Abacus</h1>
+      </a>
+
+      <nav id="navmenu" class="navmenu">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li class="dropdown"><a href="/index.html"><span>Courses</span> <i
+                        class="bi bi-chevron-down toggle-dropdown"></i></a>
+                <ul>
+                    <li><a href="Abacus.html">ABACUS</a></li>
+                    <li><a href="VedicMaths.html">VEDIC MATHS</a></li>
+                    <li><a href="Phonics.html">PHONICS</a></li>
+                    <li><a href="Smartwrite.html">SMART WRITE</a></li>
+                    <li><a href="MagicTables.html">MAGIC TABLES</a></li>
+                    <li><a href="kidzwiki.html">Kidzwiki</a></li>
+                </ul>
+            </li>
+            <li><a href="AboutUs.html">AboutUs</a></li>
+            <li><a href="Joinus.html">Join-us</a></li>
+            <li><a href="Contact.html">Contact</a></li>
+            <li><a href="Blog.html">Blogs</a></li>
+            <li><a href="Quizbyte.html">QuizByte</a></li>
+        </ul>
+        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+    </nav>
+
+      <!-- <a class="btn-getstarted" href="index.html#about">Get Started</a> -->
+
+    </div>
+
+    <!-- login form -->
+
+    <!-- <form action=""class="join-us">
+        <h3>join us</h3>
+        <input type="email"placeholder="enter your email"class="box">
+        <input type="password" placeholder="enter your password"class="box">
+        <div class="remember">
+          <input type="checkbox" name=""id="remember">
+          <label for="remember-me">remember-me</label>
+        </div>
+        <a href="#"class="btn">
+          <span class="text text-1">login now</span>
+          <span class="text text-2"aria-hidden="true">login now</span>
+
+        </a>
+        </form> -->
+  </header>
+
+  <main class="main">
+
+    <!-- Hero Section -->
+    <!-- <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
+          aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+          aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+          aria-label="Slide 3"></button>
+      </div>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="https://d138zd1ktt9iqe.cloudfront.net/media/seo_landing_files/diksha-y-abacus-01-1606207474.png" class="d-block w-100" alt="...">
+        </div>
+        <div class="carousel-item">
+          <img src="https://t3.ftcdn.net/jpg/04/96/05/78/360_F_496057888_LLZwdYHu1rRoygax6WT4rF30LLnQJ8MO.jpg" class="d-block w-100" alt="...">
+        </div>
+        <div class="carousel-item">
+          <img src="https://img.freepik.com/free-vector/young-children-playing-with-abacus_1308-15595.jpg" class="d-block w-100" alt="...">
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div> -->
+    <!-- /Hero Section -->
+
+    <!-- About Section -->
+
+
+    <div class="swiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <img src="assets/img/top-view-colorful-sticks-desk.jpg" alt="image5">
+        </div>
+        <div class="swiper-slide">
+          <img src="assets/img/WhatsApp Image 2024-10-16 at 14.07.19_270e40c4.jpg" alt="Coding Course">
+        </div>
+        <div class="swiper-slide">
+          <img src="assets/img/image (5).jpeg" alt="coloursticks">
+        </div>
+      </div>
+      <!-- Add Pagination -->
+      <div class="swiper-pagination"></div>
+      <!-- Add Navigation -->
+      <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>
+    </div><!-- /Hero Section -->
+    <br>
+
+    <div class="container">
+      <h1><strong>Online</strong><br>Abacus Learning Portal</h1>
+      <div class="cards">
+        <div class="card" id="card1">
+          <div class="card-icon">
+            <img src="https://img.icons8.com/ios/50/000000/flow-chart.png" alt="Programme Structure Icon">
+          </div>
+          <h2>ABACUS</h2>
+          <p>This is 1 Level Program (3 Months) for Junior KG Students. The
+            students learn to represent 1 to 50 Numbers on Abacus Instrument.</p>
+          <button><a href="Abacus.html">Read More</a></button>
+        </div>
+        <div class="card" id="card2">
+          <div class="card-icon">
+            <img src="https://img.icons8.com/ios/50/000000/reading.png" alt="Learning Tips Icon">
+          </div>
+          <h2>VEDIC MATHS</h2>
+          <p> Vedic Mathematics is a collection of techniques (Sutras) to solve mathematical arithmetic in
+            easy and faster way.</p>
+          <button><a href="VedicMaths.html">Read More</a></button>
+        </div>
+        <div class="card" id="card3">
+          <div class="card-icon">
+            <img src="https://img.icons8.com/ios/50/000000/idea.png" alt="Highlights Icon">
+          </div>
+          <h2>PHONICS</h2>
+          <p>It s is a method of teaching children to read by linking sounds (phonemes) and the symbols that
+            represent them (graphemes, or letter groups).</p>
+          <button><a href="Phonics.html">Read More</a></button>
+        </div>
+        <div class="card" id="card3">
+          <div class="card-icon">
+            <img src="https://img.icons8.com/ios/50/000000/flow-chart.png" alt="Programme Structure Icon">
+          </div>
+          <h2>SMART WRITE</h2>
+          <p>Handwriting activates the brain more than using keyboard, because it involves more complex motor
+            and cognitive skills.</p>
+          <button><a href="Smartwrite.html">Read More</a></button>
+        </div>
+        <div class="card" id="card1">
+          <div class="card-icon">
+            <img src="https://img.icons8.com/ios/50/000000/reading.png" alt="Learning Tips Icon">
+          </div>
+          <h2>MAGIC TABLES</h2>
+          <p> Many children struggle to learn multiplication tables. This unique course teaches to learn
+            tables upto 999</p>
+          <button><a href="MagicTables.html">Read More</a></button>
+        </div>
+        <div class="card" id="card2">
+          <div class="card-icon">
+            <img src="https://img.icons8.com/ios/50/000000/idea.png" alt="Highlights Icon">
+          </div>
+          <h2>Kidzwiki</h2>
+          <p>General knowledge plays an essential role in defining one's growth and success. No matter what we
+            choose to do in life</p>
+          <button><a href="kidzwiki.html">Read More</a></button>
+        </div>
+      </div>
+    </div>
+    <!-- Stats Section -->
+    <section id="stats" class="stats section">
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="row gy-4">
+
+          <div class="col-lg-3 col-md-6">
+            <div class="stats-item text-center w-100 h-100">
+              <span data-purecounter-start="0" data-purecounter-end="232" data-purecounter-duration="1"
+                class="purecounter"></span>
+              <p>Clients</p>
+            </div>
+          </div>
+          <!-- End Stats Item -->
+
+          <div class="col-lg-3 col-md-6">
+            <div class="stats-item text-center w-100 h-100">
+              <span data-purecounter-start="0" data-purecounter-end="521" data-purecounter-duration="1"
+                class="purecounter"></span>
+              <p>Projects</p>
+            </div>
+          </div><!-- End Stats Item -->
+
+          <div class="col-lg-3 col-md-6">
+            <div class="stats-item text-center w-100 h-100">
+              <span data-purecounter-start="0" data-purecounter-end="1453" data-purecounter-duration="1"
+                class="purecounter"></span>
+              <p>Hours Of Support</p>
+            </div>
+          </div>
+          <!-- End Stats Item -->
+
+          <div class="col-lg-3 col-md-6">
+            <div class="stats-item text-center w-100 h-100">
+              <span data-purecounter-start="0" data-purecounter-end="32" data-purecounter-duration="1"
+                class="purecounter"></span>
+              <p>Workers</p>
+            </div>
+          </div>
+          <!-- End Stats Item -->
+
+        </div>
+
+      </div>
+
+    </section>
+    <!-- /Stats Section -->
+
+    <!-- Call To Action Section -->
+    <section id="call-to-action" class="call-to-action section dark-background">
+
+      <img src="assets/img/top-view-colorful-xylophone-arrangement (2).jpg" alt="">
+
+      <div class="container">
+        <div class="row justify-content-center" data-aos="zoom-in" data-aos-delay="100">
+          <div class="col-xl-10">
+            <div class="text-center">
+              <h3>
+                A complete self learning &
+                Interactive abacus portal</h3>
+              <p>First of it's kind with enchanced features to make abacus learning interesting</p>
+              <!-- <a class="cta-btn" href="#">Call To Action</a> -->
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+
+  </main>
+
+  <footer class="footer">
+    <div class="footer-content">
+      <div class="footer-section">
+        <h3>Abacus</h3>
+        <!-- <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About us</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul> -->
+      </div>
+      <div class="footer-section">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About us</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h3>Our Top Courses</h3>
+        <ul>
+          <li><a href="#">Toddler Abacus</a></li>
+          <li><a href="#">Runner</a></li>
+          <li><a href="#">Sprinters</a></li>
+          <li><a href="#">Advance Level</a></li>
+          <li><a href="#">Grand Level</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h3>Contact</h3>
+        <p>Email: info@abacus.com</p>
+        <p>Phone: +1 234 567 8900</p>
+      </div>
+    </div>
+  </footer>
+  <div class="footer-bottom">
+    <p>© How to learn Abacus at home | Best Vedik Maths Classes For Kids| Best Handwriting Classes For Kids | Best
+      Coding Classes For Kids | How To Start My Own Abacus Classes At Home |How To Start Business Without Investment|
+      How To Create Reading Habit In Kids | Part Time Business Ideas For Women | Best Phonics Classes For Kids | General
+      knowledge Classes For Kids | Vedic Maths Teacher Training Abacus All Rights Reserved</p>
+    <p>Designed by BootstrapMade</p>
+  </div>
+
+  <!-- Scroll Top -->
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i
+      class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Preloader -->
+  <div id="preloader"></div>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+
+  <!-- Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script>
+    // Initialize Swiper
+    const swiper = new Swiper('.swiper', {
+      // Optional parameters
+      loop: true, // Enable looping
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+    });
+  </script>
+
+
+</body>
+
+</html>

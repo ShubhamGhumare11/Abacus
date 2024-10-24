@@ -1,0 +1,717 @@
+<!DOCTYPE html>
+<html lang="en">
+ 
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Index - Abacus </title>
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+ 
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+ 
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet">
+ 
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+ 
+  <!-- Main CSS File -->
+  <link href="assets/css/main.css" rel="stylesheet">
+
+    <!-- =======================================================
+  *  Name: Abacus
+  *  URL: https://bootstrapmade.com/Abacus-free-multipurpose-bootstrap-/
+  * Updated: Aug 07 2024 with Bootstrap v5.3.3
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+
+    <style>
+       
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: rgba(243, 243, 208);
+
+        }
+
+        .main {
+            padding: 20px;
+        }
+
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+
+        }
+
+        .content {
+            flex: 2;
+            padding: 20px;
+    
+        }
+
+
+        .sidebar-wrapper {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .sidebar {
+            background-color: #39b54a;
+            padding: 20px;
+            height: 400px;
+        }
+
+        .sidebar a {
+            display: block;
+            text-decoration: none;
+            color: white;
+            background-color: #5dbd66;
+            padding: 10px;
+            margin: 10px 0;
+            font-weight: bold;
+            border-radius: 5px;
+            text-align: center;
+        }
+
+        .sidebar a:hover {
+            background-color: #45a657;
+        }
+
+        .blog-image {
+            margin-top: 20px;
+        }
+
+        .blog-image img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            color: #333;
+
+        }
+
+        .abacus-image {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .abacus-image img {
+            width: 80%;
+            max-width: 500px;
+            border-radius: 10px;
+        }
+
+        .contentp {
+     
+            font-size: 1.2rem;
+            color: #555;
+            line-height: 1.8;
+            margin-bottom: 1.5rem;
+
+        }
+
+        .content1 ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        /* .content li{
+            line-height: 1.9;
+            list-style-type: circle;
+            font-size: 1.1rem;
+            
+        }  */
+        .content1 ul li {
+            font-size: 1.1rem;
+            color: #333;
+            margin-bottom: 0.8rem;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        .benefits-container {
+            display: flex;
+            justify-content: space-between;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .column {
+            flex: 1;
+            margin: 0 10px;
+        }
+
+        /* .header-box {
+            background-color:;
+            color: white;
+            padding: 10px;
+            font-weight: bold;
+            border-radius: 8px;
+             text-align: center;
+            }  */
+
+        .benefits-list {
+            list-style: none;
+            margin-top: 20px;
+        }
+
+        .benefit-item {
+            background-color: #f1f1f1;
+            padding: 10px;
+            margin-bottom: 10px;
+            border-radius: 8px;
+            position: relative;
+            padding-left: 30px;
+        }
+
+        .benefit-item::before {
+            content: "•";
+            position: absolute;
+            left: 10px;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 20px;
+
+        }
+
+        @media (max-width: 768px) {
+            .benefits-container {
+                flex-direction: column;
+            }
+
+            .column {
+                margin: 0 0 20px 0;
+            }
+        }
+
+
+
+        .section-padding40 {
+            padding: 40px 0;
+        }
+
+        .section-tittle {
+            margin-bottom: 40px;
+        }
+
+        .section-tittle h2 {
+            font-size: 32px;
+            color: #333;
+            text-align: center;
+            animation: fadeInDown 1s ease-out;
+        }
+
+        /* Card styling */
+        .properties__card {
+            background: #fff;
+            border: 5px solid transparent;
+            /* Border size */
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.6s, border-color 0.3s ease;
+            /* Add transition for border */
+            perspective: 1000px;
+            /* Perspective for the 3D effect */
+            position: relative;
+        }
+
+        .properties__card:hover {
+            border-color: #964c98;
+            /* Change border color on hover */
+            transform: scale(1.05);
+            /* Scale effect on hover */
+        }
+
+        .properties__img {
+            width: 100%;
+            height: 250px;
+            position: relative;
+            transform-style: preserve-3d;
+            /* Preserve the 3D effect */
+            transition: transform 0.6s;
+            /* Transition for the flipping effect */
+        }
+
+        .properties__img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            backface-visibility: hidden;
+            /* Hide back face of the image */
+            position: absolute;
+            /* Position absolute to stack images */
+            top: 0;
+            left: 0;
+        }
+
+        .properties__img img.back {
+            transform: rotateY(180deg);
+            /* Rotate the back image */
+        }
+
+        .properties__card:hover .properties__img {
+            transform: rotateY(180deg);
+            /* Flip the card on hover */
+        }
+
+        .properties__caption {
+            padding: 20px;
+            text-align: center;
+        }
+
+        .properties__caption h3 a {
+            font-size: 20px;
+            color: #333;
+            text-decoration: none;
+            transition: color 0.3s ease;
+            position: relative;
+        }
+
+        .properties__caption h3 a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -5px;
+            left: 50%;
+            background-color: rgb(63, 5, 63);
+            transition: all 0.3s ease;
+        }
+
+        .properties__caption h3 a:hover::after {
+            width: 100%;
+            left: 0;
+        }
+
+        /* Card styling */
+        .properties__card {
+            background: #fff;
+            border: 5px solid rgb(16, 16, 32);
+            /* Updated border color to blue */
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.6s, border-color 0.3s ease;
+            perspective: 1000px;
+            position: relative;
+        }
+
+        /* Responsive layout */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+
+        }
+
+        .row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+        }
+
+        .col-md-6,
+        .col-lg-4 {
+            flex: 0 0 calc(33.333% - 20px);
+            box-sizing: border-box;
+        }
+
+        @media (max-width: 768px) {
+
+            .col-md-6,
+            .col-lg-4 {
+                flex: 0 0 calc(50% - 20px);
+            }
+        }
+
+        @media (max-width: 576px) {
+
+            .col-md-6,
+            .col-lg-4 {
+                flex: 0 0 100%;
+            }
+        }
+
+        /* Animations */
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .footer {
+            background-color: #000;
+            color: #fff;
+            padding: 40px 0;
+        }
+
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+
+        }
+
+        .footer-section {
+            flex: 1;
+            margin-right: 40px;
+
+        }
+
+        .footer-section h3 {
+            font-size: 18px;
+            margin-bottom: 20px;
+            color: white;
+
+        }
+
+        .footer-section ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .footer-section li {
+            margin-bottom: 10px;
+        }
+
+        .footer-section a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        .footer-bottom {
+            background-color: #000;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+            font-size: 12px;
+        }
+    </style>
+</head>
+
+<body class="index-page">
+
+    
+    <header id="header" class="header d-flex align-items-center sticky-top">
+        <div class="container-fluid container-xl position-relative d-flex align-items-center">
+   
+          <a href="index.html" class="logo d-flex align-items-center me-auto">
+            <!-- Uncomment the line below if you also wish to use an image logo -->
+            <!-- <img src="assets/img/logo.png" alt=""> -->
+            <h1 class="sitename">Abacus</h1>
+          </a>
+   
+          <nav id="navmenu" class="navmenu">
+            <ul>
+              <li><a href="Home.html">Home</a></li>
+              <li class="dropdown"><a href="/index.html"><span>Courses</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+                <ul>
+                  <li><a href="Abacus.html">ABACUS</a></li>
+                  <li><a href="VedicMaths.html">VEDIC MATHS</a></li>
+                  <li><a href="Phonics.html">PHONICS</a></li>
+                  <li><a href="Smartwrite.html">SMART WRITE</a></li>
+                  <li><a href="MagicTables.html">MAGIC TABLES</a></li>
+                  <li><a href="kidzwiki.html">Kidzwiki</a></li>
+                </ul>
+              </li>
+              <!-- <li class="dropdown"><a href="/AboutUs.html"><span>About Us</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a> -->
+               
+                   <!-- <li><a href="/WhyUs.html">AboutUs </a></li>  -->
+                  <!-- <button id="whyUsBtn" class="btn">Why Us</button>  -->
+               
+     
+             
+              <li><a href="AboutUs.html">AboutUs</a></li>
+              <li><a href="Joinus.html">join-us  </a></li>
+              <li><a href="Contact.html">contact</a></li>
+              <li><a href="Blog.html">BLOGS</a></li>
+              <li><a href="Quizbyte.html">QuizByte</a></li>
+             
+             
+              </li>
+              <!-- <li><a href="#contact">Contact</a></li> -->
+            </ul>
+            <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+          </nav>
+   
+         
+   
+        </div>
+   
+      </header>
+
+    <main class="main">
+        <div class="container">
+            <div class="content">
+                <h1>What is an Abacus?</h1> <br>
+                <img src="assets/img/happy-boy-studing-mental-arithmetic-school-education.webp"
+                      alt="Abacus and Kid Image">
+                    
+                <p> Abacus is a simple tool or a hardware used for performing rapid arithmetic calculations.</p>
+               <p>Calculation based on abacus was invented in ancient times and now widely used as a brain</p>
+                <p>development programme. It consists of a rectangular frame holding a number of vertically</p>
+                <p>arranged rods, on which beads slide up and down.</p>
+
+                <!-- <h2>An Unordered HTML List</h2> -->
+                <div class="content1">
+                    <ul>
+                        <li>One of the most popular calculating methods from ancient times.</li>
+                        <li>Children do fast calculations in mind by visualizing Abacus bead movements.</li>
+                        <li>Researches prove that Abacus learners use both sides of the brain- left hemisphere & right
+                            hemisphere.</li>
+                        <li>Highly effective in improving the concentration level of children.</li>
+                    </ul>
+
+
+                    <h2><strong>What is Mental Arithmetic ?</strong></h2>
+                    <ul>
+                        <li>‘Mental Arithmetic’ is a term used in Abacus for the calculations done in mind.</li>
+                        <li>Even large numbers can be calculated in mind, that too within seconds</li>
+                        <li>‘Mental arithmetic’ improves student’s imagination skills</li>
+                        <li>Effective in cracking competitive time based tests.</li>
+                        <li>Mind calculation enhances the concentration level of child.</li>
+                    </ul>
+                    <div >
+                    <h2><strong>Parts of Abacus</strong></h2>
+                    <img src="assets/img/parts-of-abacus.jpg" alt="Abacus and Kid Image">
+
+                    <ul>
+                        <li>The boundary on all 4 sides of the abacus is called the Frame.</li>
+                        <li>The abacus which we are using has 17 rods. Each rod has 5 beads.</li>
+                        <li>The abacus is divided into the upper and the lower part by a horizontal bar called the Beam.
+                        </li>
+                        <li>The beads in the lower part are the Lower Beads or the Earth Beads.</li>
+                        <li>The beads in the upper part are the Upper Beads or the Heaven Beads.</li>
+                    </ul>
+                </div>
+                    <h1>What are the advantages of Abacus ?</h1>
+                    <img src="assets/img/AbacusAdvantages.jpg" alt="Abacus and Kid Image">
+
+                    <div class="benefits-container">
+                        <div class="column">
+                            <ul class="benefits-list">
+                                <li class="benefit-item">Mental arithmetic Calculations</li>
+                                <li class="benefit-item">Improves Concentration skills</li>
+                                <li class="benefit-item">Improves imagination skills</li>
+                            </ul>
+                        </div>
+                        <div class="column">
+                            <ul class="benefits-list">
+                                <li class="benefit-item">Sharpen memory power</li>
+                                <li class="benefit-item">Boost confidence</li>
+                                <li class="benefit-item">Personality Development</li>
+                            </ul>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div> 
+            
+            <div class="sidebar-wrapper">
+                <div class="sidebar">
+                    <a href="#">Why Abacus</a>
+                    <a href="#">History of Abacus</a>
+                    <a href="#">Abacus Calculations</a>
+                    <a href="#">Abacus Features</a>
+                    <a href="#">Mental Math</a>
+                    <a href="#">FAQ</a>
+                </div>
+                <div class="blog-image">
+                    <img src="assets/img/AbacusMasterBlog.jpg" alt="blog-image">
+                </div>
+
+
+            </div>
+
+            <div class="courses-area section-padding40">
+                <div class="container">
+                    <div class="row justify-content-center">
+                        <!-- <div class="col-xl-7 col-lg-8">
+                        <div class="section-tittle">
+                            <h2>Our Courses</h2>
+                        </div>
+                    </div> -->
+                    </div>
+                    <div class="row">
+                        <!-- Card 1 -->
+                        <div class="col-md-6 col-lg-4">
+                            <div class="properties__card">
+                                <div class="properties__img">
+                                    <img src="assets/img/girl image.jpg" alt="Abacus" class="front">
+                                    <img src="assets/img/girl image.jpg" alt="Abacus Back" class="back">
+                                </div>
+                                <div class="properties__caption">
+                                    <h3><a href="#">Abacus</a></h3>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Card 2 -->
+                        <div class="col-md-6 col-lg-4">
+                            <div class="properties__card">
+                                <div class="properties__img">
+                                    <img src="assets/img/31022.jpg" alt="VedicMaths" class="front">
+                                    <img src="assets/img/31022.jpg" alt="VedicMaths Back" class="back">
+                                </div>
+                                <div class="properties__caption">
+                                    <h3><a href="#">VedicMaths</a></h3>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Card 3 -->
+                        <div class="col-md-6 col-lg-4">
+                            <div class="properties__card">
+                                <div class="properties__img">
+                                    <img src="assets/img/high-angle-kid-cheating-school-test.jpg" alt="SMART WRITE"
+                                        class="front">
+                                    <img src="assets/img/high-angle-kid-cheating-school-test.jpg" alt="SMART WRITE Back"
+                                        class="back">
+                                </div>
+                                <div class="properties__caption">
+                                    <h3><a href="#">SMART WRITE</a></h3>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Card 4 -->
+                        <div class="col-md-6 col-lg-4">
+                            <div class="properties__card">
+                                <div class="properties__img">
+                                    <img src="assets/img/4041.jpg" alt="MAGIC TABLES" class="front">
+                                    <img src="assets/img/4041.jpg" alt="MAGIC TABLES Back" class="back">
+                                </div>
+                                <div class="properties__caption">
+                                    <h3><a href="#">MAGIC TABLES</a></h3>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Card 5 -->
+                        <div class="col-md-6 col-lg-4">
+                            <div class="properties__card">
+                                <div class="properties__img">
+                                    <img src="assets/img/29072.jpg" alt="Kidzwiki" class="front">
+                                    <img src="assets/img/29072.jpg" alt="Kidzwiki Back" class="back">
+                                </div>
+                                <div class="properties__caption">
+                                    <h3><a href="#">Kidzwiki</a></h3>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Card 6 -->
+                        <div class="col-md-6 col-lg-4">
+                            <div class="properties__card">
+                                <div class="properties__img">
+                                    <img src="assets/img/fidget-pop-it-toy-rainbow-color-antistress-fun-educational.jpg"
+                                        alt="PHONICS" class="front">
+                                    <img src="assets/img/fidget-pop-it-toy-rainbow-color-antistress-fun-educational.jpg"
+                                        alt="PHONICS Back" class="back">
+                                </div>
+                                <div class="properties__caption">
+                                    <h3><a href="#">PHONICS</a></h3>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </main>
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Abacus</h3>
+                <!-- <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About us</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul> -->
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About us</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Our Top Courses</h3>
+                <ul>
+                    <li><a href="#">Toddler Abacus</a></li>
+                    <li><a href="#">Runner</a></li>
+                    <li><a href="#">Sprinters</a></li>
+                    <li><a href="#">Advance Level</a></li>
+                    <li><a href="#">Grand Level</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Contact</h3>
+                <p>Email: info@abacus.com</p>
+                <p>Phone: +1 234 567 8900</p>
+            </div>
+        </div>
+    </footer>
+    <div class="footer-bottom">
+        <p>© How to learn Abacus at home | Best Vedik Maths Classes For Kids| Best Handwriting Classes For Kids | Best
+            Coding Classes For Kids | How To Start My Own Abacus Classes At Home |How To Start Business Without
+            Investment| How To Create Reading Habit In Kids | Part Time Business Ideas For Women | Best Phonics Classes
+            For Kids | General knowledge Classes For Kids | Vedic Maths Teacher Training Abacus All Rights Reserved</p>
+        <p>Designed by BootstrapMade</p>
+    </div>
+    <!-- Scroll Top -->
+    <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i
+            class="bi bi-arrow-up-short"></i></a>
+
+    <!-- Preloader -->
+    <div id="preloader"></div>
+
+    <!-- Vendor JS Files -->
+    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/vendor/php-email-form/validate.js"></script>
+    <script src="assets/vendor/aos/aos.js"></script>
+    <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+    <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+    <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+    <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+    <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+
+    <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>

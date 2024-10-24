@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Favicons -->
+    <link href="assets/img/favicon.png" rel="icon">
+    <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+
+    <!-- Vendor CSS Files -->
+    <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+    <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+    <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+    <!-- Main CSS File -->
+    <link href="assets/css/main.css" rel="stylesheet">
+    <title>AbacusMaster</title>
+    <style>
+         .roboto-regular {
+            font-family: "Roboto", sans-serif;
+            font-weight: 400;
+            font-style: normal;
+            }
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            line-height: 1.6;
+            background-color: rgba(243, 243,208);
+        }
+
+        h1.heading {
+            font-size: 2.5rem;
+            color: #333;
+            text-align: center;
+            margin-bottom: 2rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1rem;
+        }
+
+        .hero {
+            height: 100vh;
+            background-color: #f5f5f5;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+            text-align: center;
+            padding: 2rem;
+        }
+
+        .hero img {
+            max-width: 100%;
+            height: auto;
+            object-fit: cover;
+            border-radius: 10px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+
+        .content {
+            padding: 5rem;
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 1rem;
+        }
+
+        h4 {
+            font-size: 1.25rem;
+            font-weight: 500;
+            color: #333;
+            margin-bottom: 1rem;
+        }
+
+        p {
+            font-size: 18px;
+            line-height: 1.6;
+            color: #666;
+            margin-bottom: 1.5rem;
+            
+          
+        }
+
+        strong {
+            font-weight: 700;
+        }
+
+        .accordion-item {
+            border: 1px solid #ddd;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            overflow: hidden;
+        }
+
+        .accordion-header {
+            background-color: #f5f5f5;
+            padding: 10px;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .accordion-content {
+            display: none;
+            padding: 10px;
+            position: relative;
+        }
+
+        .accordion-content.active {
+            display: block;
+        }
+
+        .dropdown-icon {
+            transition: transform 0.3s ease;
+        }
+
+        .dropdown-icon.active {
+            transform: rotate(180deg);
+        }
+
+        .close-btn {
+            position: absolute;
+            top: 5px;
+            right: 5px;
+            background: none;
+            border: none;
+            font-size: 18px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body class="index-page">
+    <header id="header" class="header d-flex align-items-center sticky-top">
+        <div class="container-fluid container-xl position-relative d-flex align-items-center">
+            <a href="index.html" class="logo d-flex align-items-center me-auto">
+                <h1 class="sitename">Abacus</h1>
+            </a>
+            <nav id="navmenu" class="navmenu">
+                <ul>
+                    <li><a href="/Home.html">Home</a></li>
+                    <li class="dropdown"><a href="/index.html"><span>Courses</span> <i
+                                class="bi bi-chevron-down toggle-dropdown"></i></a>
+                        <ul>
+                            <li><a href="/Abacus.html">ABACUS</a></li>
+                            <li><a href="/VedicMaths.html">VEDIC MATHS</a></li>
+                            <li><a href="/Phonics.html">PHONICS</a></li>
+                            <li><a href="/Smartwrite.html">SMART WRITE</a></li>
+                            <li><a href="/MagicTables.html">MAGIC TABLES</a></li>
+                            <li><a href="/kidzwiki.html">Kidzwiki</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="/AboutUs.html">About Us</a></li>
+                    <li><a href="/Joinus.html">JOIN US</a></li>
+                    <li><a href="/Contact.html">Contact</a></li>
+                    <li><a href="/Blog.html">BLOGS</a></li>
+                    <li><a href="/Quizbyte.html">QuizByte</a></li>
+                </ul>
+                <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+            </nav>
+        </div>
+    </header>
+    <section id="hero" class="hero section">
+        <img src="/assets/img/kids-classroom-taking-english-class.jpg" alt="">
+    </section>
+
+    <section class="content">
+        <h2>Introduction to SMART WRITE</h2>
+        <h2>Activate your child's brain through handwriting</h2>
+        <div class="section-divider"></div>
+        <p>Handwriting is an essential skill for both children and adults…. Handwriting activates the brain more than
+            using keyboard, because it involves more complex motor and cognitive skills. Also, it contributes to reading
+            fluency because it activates visual perception of letters. It is a complex skill as it involves pencil grip,
+            letter formation, and body posture.</p>
+        <p>There are other elements involved in handwriting including vision, eye-hand coordination, muscle memory,
+            posture, body control, as well as pencil grasp and letter formation. ARISTO KID’S SMART WRITE course teaches
+            it’s students all these skills.</p>
+        <p>There are many keys of fluid, automatic and legible handwriting. Each Key contains special design practice
+            pages, so that student can easily improves his/her handwriting skill. Students will learn how to incorporate
+            these keys/skills into their daily writing.</p>
+        <p>In recent years, modern technology has dramatically changed the way we communicate through writing. However,
+            despite the increased use of computers for writing, the skill of handwriting remains important in education,
+            employment and in everyday life.</p>
+        <p>This program is designed for children to improve not only legibility but also aesthetics of their handwriting
+            in an easy and fun way. The course book is designed in such a way that kids take interest in improving their
+            handwriting, also we train the trainer in such a way he/she goes in a systematic way so that children start
+            showing interest and commitment in improving their handwriting.</p>
+        <p>A test is conducted at the end of course and certificate is issued to the student after satisfied performance
+            of the child. Company provides training, course material, test and certificate, also takes feedback from
+            parent during and after the course to ensure 100% satisfaction of parents.</p>
+
+        <h2>Are you looking for best Handwriting classes for kids?</h2>
+        <div class="section-divider"></div>
+        <p>Handwriting is an essential skill for your children. Poor handwriting may have a bad effect on school
+            performance and children who lack some of these skills may miss learning opportunities. The best Handwriting
+            classes for kids is the perfect solution for improving your child’s handwriting. </p>
+
+        <h2>Good Handwriting is a great way of clear communication</h2>
+        <div class="section-divider"></div>
+        <p>Handwriting is a way of success in other subjects, as good handwriting has a better impact on grades. Typing
+            is convenient; however, writing by hand is way more stimulating to the brain of your child. Your child needs
+            brain and mind exercises as much as he/she requires physical exertion. Just enrol your child in our best
+            Handwriting classes for kids to write perfectly.</p>
+
+        <h2>We offer best Handwriting classes for kids at affordable fees</h2>
+        <div class="section-divider"></div>
+        <p>If you’re looking for a fast, fun, and simple method to improve your child’s handwriting, your search ends
+            here. No matter how bright is your child or how much effort your child has put in for exam preparations, it
+            is a necessity for him/her to write properly and clearly to score higher.</p>
+        <p>Our best handwriting classes for kids are designed to identify learning styles and nurture different
+            individual skills and combine them to bestow perfect writing techniques. Handwriting improvement is
+            essential for better scores. We make your child confident by making them perfect in handwriting. Our classes
+            help to enhance the beauty of each letter your child writes.</p>
+
+        <h2>How to improve Handwriting Skills?</h2>
+        <h4><strong>Activate your child's brain through handwriting</strong></h4>
+        <div class="section-divider"></div>
+        <p>Good handwriting is achieved by finding the right grasp and posture for the pencil. If the pencil is not
+            grasped correctly, the writing won’t flow quickly and easily. The correct way of holding the pencil is to
+            rest it next to the base of the thumb. The child should hold the pencil lightly but firmly with his or her
+            thumb, middle finger, and index finger. This will allow them to write more without fatiguing their fingers.
+            This is the first basic step in developing best handwriting skills.</p>
+
+
+        <h4><strong>Following the line is key</strong></h4>
+        <div class="section-divider"></div>
+        <p>One problem many children face is keeping their letters in proportion with one another while also following
+            the line. This results in the words appearing mismatched, with each character a different size and going out
+            of the line of flow. Parents and educators can help their children overcome this problem by following
+            certain methods, such as making them practice writing on lined paper so that they can fill up the space
+            between the lines properly. Make sure the capital letters fill the space between the top and bottom lines,
+            and see to it that the lowercase letters are about half the size of the capital letters. There are specially
+            lined notebooks with blue and red markings which help kids with poor handwriting overcome their difficulties
+            with this problem.</p>
+
+        <h4><strong>Improving the pace of writing</strong></h4>
+        <div class="section-divider"></div>
+        <p>Most children have a tendency to put a lot of pressure on the paper or notebook they are writing on. This
+            will not only spoil their handwriting but also stress their fingers and tire them out very quickly. Children
+            should be taught to hold the writing tool lightly but firmly, and not apply an excess of pressure on the
+            paper while writing. By following this step, the words will glide easily and the handwriting will end up
+            neat and aesthetically pleasing.</p>
+
+        <h4><strong>Keeping sustainable pressure</strong></h4>
+        <div class="section-divider"></div>
+        <p>Learning the algorithms means memorizing step by step moves and in a particular order. There is usually no
+            mistake allowed with algorithms. This will train your brain to memorize and map things in their order.</p>
+
+
+        <h4><strong>Training through tools and handwriting kits</strong></h4>
+        <div class="section-divider"></div>
+        <p>There are many handwriting tools and kits available in the market that can help children improve their best
+            handwriting skills. For example, Zaner-Bloser solutions are amongst the most globally acclaimed tools, used
+            by schools and parents all over the world to enable young kids to improve their handwriting. These
+            handwriting solutions are aimed at grades K to 6 and consist of a mix of print and digital solutions.
+            Zaner-Bloser’s handwriting program is a definitive package for handwriting instruction which teaches
+            students to write fluently and legibly in fewer than fifteen minutes a day, from their first letters all the
+            way up to cursive script.</p>
+
+        <h2>FAQ</h2>
+
+
+        <div class="accordion">
+            <div class="accordion-item">
+                <div class="accordion-header" onclick="toggleAccordion(this)">
+                    <span>How can I improve my child's handwriting?</span>
+                    <span class="dropdown-icon">▼</span>
+                </div>
+                <div class="accordion-content">
+                    <button class="close-btn" onclick="closeAccordion(this)">×</button>
+                    <p>The practice makes man perfect. Likewise, to improve child’s handwriting, focused efforts are needed to put in to improve his/her handwriting. Also, it is extremely important that child learns to write in a correct way. There are many courses available in the market to improve handwriting of the child, where they get books and weekly classes are conducted to ensure child has learnt correctly and done adequate practice. Refer company website of Abacus for more details</p>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="accordion">
+            <div class="accordion-item">
+                <div class="accordion-header" onclick="toggleAccordion(this)">
+                    <span>How do I start writing my kids handwriting?</span>
+                    <span class="dropdown-icon">▼</span>
+                </div>
+                <div class="accordion-content">
+                    <button class="close-btn" onclick="closeAccordion(this)">×</button>
+                    <p>You can either buy a book from the market for your kids to write in the given format, or let your child joins any handwriting class where books will be given as part of the class and students will be taught writing every alphabet correctly. Refer a company website of Abacus for more details</p>
+                </div>
+            </div>
+
+        </div>
+        <div class="accordion">
+            <div class="accordion-item">
+                <div class="accordion-header" onclick="toggleAccordion(this)">
+                    <span>What is the right age to start writing?</span>
+                    <span class="dropdown-icon">▼</span>
+                </div>
+                <div class="accordion-content">
+                    <button class="close-btn" onclick="closeAccordion(this)">×</button>
+                    <p>The correct age to start writing is 4 years old. At this age, if child starts learning writing correctly then his/her handwriting will be proper as desired.</p>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="accordion">
+            <div class="accordion-item">
+                <div class="accordion-header" onclick="toggleAccordion(this)">
+                    <span>How can I help my child with difficulty writing?</span>
+                    <span class="dropdown-icon">▼</span>
+                </div>
+                <div class="accordion-content">
+                    <button class="close-btn" onclick="closeAccordion(this)">×</button>
+                    <p>If you child has difficulty in writing, then the recommendation is to put him/her for a handwriting class, where he will give his focused attention to the writing. In the class, teacher will ensure that he/she writes everything properly and do the practice enough. </p>
+                </div>
+            </div>
+
+        </div>
+
+
+
+        <script>
+            function toggleAccordion(header) {
+                const content = header.nextElementSibling;
+                const icon = header.querySelector('.dropdown-icon');
+                content.classList.toggle('active');
+                icon.classList.toggle('active');
+            }
+
+            function closeAccordion(closeBtn) {
+                const content = closeBtn.parentElement;
+                const header = content.previousElementSibling;
+                const icon = header.querySelector('.dropdown-icon');
+                content.classList.remove('active');
+                icon.classList.remove('active');
+            }
+        </script>
+
+</body>
+
+</html>
